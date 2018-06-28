@@ -1,0 +1,42 @@
+# It uses load_setup_py_data from conda_build.jinja_context to populate some fields (jinja template strings)
+# with values fed from setuptools.
+
+{% set data = load_setup_py_data() %}
+
+# package information
+package:
+  # hard-code name as load_setup_py_data() fails to get package name
+  name: "temperature"
+  # the version string is taken from the most recent tag
+  version: {{ data.get('version') }}
+
+# where to fetch the source code
+source:
+  path: .
+
+# build specifications
+build:
+  # PY_VER resolves to the python version used for build
+  string: py{{ CONDA_PY }}_{{ PKG_BUILDNUM }}
+  # disable including recipe (files in repository) in the final package, only code zipped as .egg
+  include_recipe: False
+  # For short build scripts, this can be more convenient. Used instead of build.sh and bld.bat.
+  script: python setup.py install
+
+# requirements for build and run time
+requirements:
+  build:
+    - python
+    - setuptools
+  run:
+    - python
+    - setuptools
+
+exclude:
+  - menuinst
+
+# the package will be installed into a separate environment where the tests will be run
+test:
+  imports:
+    # Test that the imports are working
+    - temperature
