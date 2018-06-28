@@ -8,7 +8,7 @@ setup(
     license='MIT',
     author='PERL',
     author_email='per.voie@gmail.com',
-    description='Temperature conversions. Example project to familiarize with GitHub and TravisCI',
+    description='Temperature conversions.',
     entry_points={
         'console_scripts': ['convert-temperature=temperature.conversion:main'],
     },
