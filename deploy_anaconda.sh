@@ -3,9 +3,6 @@
 # to create a token:
 # >>> anaconda login
 # >>> anaconda auth -c -n travis --max-age 307584000 --url https://anaconda.org/USERNAME/PACKAGENAME --scopes "api:write api:read"
-PKG_NAME=temperature
-ANACONDA_TOKEN=to-8c5f8ccc-3c62-4acb-8363-43ed219fe996
-
 set -e
 
 echo "Converting conda package..."

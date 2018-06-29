@@ -33,10 +33,9 @@ def main():
 
     args = parser.parse_args()
 
-    f = args.get("temperature")
-    is_celsius = args.get("celsius")
+    f = args.temperature
 
-    if is_celsius:
+    if args.is_celsius:
         c = fahr_to_cels(f)
         print("Temperature %5.3f fahrenheit equals %5.3f celsius" % (f, c))
     else:
