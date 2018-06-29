@@ -40,3 +40,9 @@ test:
   imports:
     # Test that the imports are working
     - temperature
+
+about:
+  home: {{ data.get('url') }}
+  license: {{ data.get('license') }}
+  license_file: LICENSE
+  summary: {{ data.get('description') }}
