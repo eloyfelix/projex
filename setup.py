@@ -4,7 +4,7 @@ setup(
     name='temperature',
     version='1.0.0',
     packages=['temperature'],
-    url='',
+    url='https://github.com/tovop/projex',
     license='MIT',
     author='PERL',
     author_email='per.voie@gmail.com',
