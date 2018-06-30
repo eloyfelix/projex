@@ -1,8 +1,10 @@
 #!/bin/bash
-# this script uses the ANACONDA_TOKEN env var. 
-# to create a token:
+# This script uses the ANACONDA_TOKEN env var.
+# To create a token use the commands below or directly in your conda account.
 # >>> anaconda login
 # >>> anaconda auth -c -n travis --max-age 307584000 --url https://anaconda.org/USERNAME/PACKAGENAME --scopes "api:write api:read"
+#
+# The token is stored as env var in your travis account (for security reasons, not here).
 set -e
 
 echo "Converting conda package..."
