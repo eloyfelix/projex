@@ -6,6 +6,8 @@
 Welcome to Temperature's documentation!
 =======================================
 
+This project is used for familiarizing with the ecosystem github, travis, conda and readthedocs.
+
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
